@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -10,9 +12,12 @@ public class Main {
         payments[3] = 10_000;
         payments[4] = 10_500;
 
-        for (int payment : payments) {
-            System.out.println("Сумма трат за месяц составила " + payment + " рублей");
+        int sum = 0;
+
+        for (int element : payments) {
+            sum += element;
         }
+        System.out.println("Сумма трат за месяц составила " + sum + " рублей");
         System.out.println();
 
         // задача 2
@@ -52,7 +57,7 @@ public class Main {
         monthlyExpenses[4] = 20_000;
 
         double average;
-        double sum = 0;
+
         for (double element : monthlyExpenses) {
             sum += element;
         }
